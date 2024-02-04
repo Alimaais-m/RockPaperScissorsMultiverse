@@ -30,6 +30,7 @@ h1 {
 
 .choices {
     display: flex;
+    flex-direction: column; /* Change to column for mobile */
     gap: 20px;
 }
 
@@ -116,4 +117,11 @@ button:hover {
 #infoBtn:hover,
 #homeBtn:hover {
     background-color: #FF1493;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .choices {
+        flex-direction: row; /* Change to row for larger screens */
+    }
 }
