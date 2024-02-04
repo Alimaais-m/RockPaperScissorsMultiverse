@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapons</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="weapons.js" defer></script>
+</head>
+<body>
+    <h1>Weapons</h1>
+    <div class="scorebox">
+        <h2>Scoreboard</h2>
+        <div class="scoreDisplay">Player:
+            <span id="playerScoreDisplay" class="greenText">0</span>
+        </div>
+
+        <div class="scoreDisplay">Computer:
+            <span id="computerScoreDisplay" class="redText">0</span>
+        </div>
+    </div>
+
+    <div class="choices">
+        <button onclick="playGame('sword')"><img src="images/sword.jpg" alt="sword"></button>
+        <button onclick="playGame('arrow')"><img src="images/arrow.png" alt="arrow"></button>
+        <button onclick="playGame('shield')"><img src="images/shield.jpg" alt="shield"></button>
+    </div><br><br>
+    
+    <div class="display-container">
+        <div id="playerDisplay">Player: </div>
+        <div id="computerDisplay">Computer: </div>
+    </div><br>
+    <div id="resultDisplay"></div>
+    <button onclick="reset()" id="resetBtn">Reset Score</button><br>
+    <button onclick="displayInfo()" id="infoBtn">Click Me!</button><br><br>
+    <button onclick="goToHomePage()" id="homeBtn">Home</button>
+
+
+    <div id="textField" style="display: none;">
+        <h2>Game Information</h2>
+        <button onclick="hideInfo()" id="hideBtn">X</button>
+        <p>Sword defeats Arrow.</p>
+        <p>Arrow pierces Shield.</p>
+        <p>Shield blocks Sword.</p>
+    </div>
+   
+
+    <script src="weapons.js"></script>
+</body>
+</html>

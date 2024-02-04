@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Four Elements</h1>
+    <div class="scorebox">
+        <h2>Scoreboard</h1>
+        <div class="scoreDisplay">Player:
+            <span id="playerScoreDisplay" class="greenText">0</span>
+        </div>
+
+        <div class="scoreDisplay">Computer:
+            <span id="computerScoreDisplay" class="redText">0</span>
+        </div>
+    </div>
+
+    <div class="choices">
+        <button onclick="playGame('air')"><img src="images/air.jpg" alt="air"></button>
+        <button onclick="playGame('water')"><img src="images/water.jpg" alt="water"></button>
+        <button onclick="playGame('fire')"><img src="images/fire.jpg" alt="fire"></button>
+        <button onclick="playGame('earth')"><img src="images/earth.jpg" alt="earth"></button>
+    </div><br><br>
+    
+    <div class="display-container">
+        <div id="playerDisplay">Player: </div>
+        <div id="computerDisplay">Computer: </div>
+    </div><br>
+        <div id="resultDisplay"></div>
+    <button onclick="reset()" id="resetBtn">Reset Score</button><br>
+    <button onclick="displayInfo()"id="infoBtn">Click Me!</button><br><br>
+    <button onclick="goToHomePage()" id="homeBtn">Home</button>
+
+
+    <div id="textField" style="display: none;">
+        <h2>Game Information</h2><button onclick="hideInfo()" id="hideBtn">X</button>
+        <p>Air 🌪️ vs. Fire 🔥: Air feeds the flames, so Air wins against Fire.</p>
+        <p>Fire 🔥 vs. Earth 🌍: Fire can melt or consume Earth, so Fire wins against Earth.</p>
+        <p>Earth 🌍 vs. Water 💧: Earth can contain or redirect Water, so Earth wins against Water.</p>
+        <p>Water 💧 vs. Air 🌪️: Water can extinguish or redirect Air, so Water wins against Air.</p>
+    </div>
+
+   
+    
+
+    <script src="elements.js"></script>
+</body>
+</html>
